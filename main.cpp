@@ -55,7 +55,7 @@ int main(){
             FirstResponse = HomeScreen(db);
         } else {
             cout << "Not Valid Response. Please Try again" << endl;
-            //this_thread::sleep_for(std::chrono::seconds(2));
+            this_thread::sleep_for(std::chrono::seconds(10));
             FirstResponse = HomeScreen(db);
         }
     }
