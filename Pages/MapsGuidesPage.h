@@ -7,8 +7,11 @@
 #include <iostream>
 #include <iomanip>
 #include "print.h"
-using namespace std;
+#include <vector>
 
-string MapsGuidesPage();
+
+std::vector<std::string> generateOSMUrls(double baseLat, double baseLon, int zoom, double latIncrement, double lonIncrement, int steps);
+std::string constructOSMUrl(double lat, double lon, int zoom);
+std::string MapsGuidesPage();
 
 #endif //SEMESTERPROJECT_MAPSGUIDESPAGE_H
