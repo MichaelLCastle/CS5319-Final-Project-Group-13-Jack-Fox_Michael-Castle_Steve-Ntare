@@ -53,5 +53,12 @@ std::string MapsGuidesPage() {
         std::cout << url << std::endl;
     }
 
-    return "0"; // Return to home screen
+    //return "0"; // Return to home screen
+    string header(100, '=');
+    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
+    string response;
+    cout << "Type Answer Here: ";
+    cin >> response;
+    cout << header << '\n';
+    return response;
 }

@@ -57,23 +57,23 @@ string AIHelperPage(){
     cout << endl;
     print(CENTER, "Ask a Question Below", LINELENGTH);
     cout << endl;
-    cout << "0) Return to Homepage" << endl << "X) To End Program" << endl << "Or Enter your Question Here!: ";
+    cout << endl << "Or Enter your Question Here!: ";
 
     // Use getline to read the full line of input
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     getline(cin, userQuestion);  // This replaces cin >> response;
 
-    if(userQuestion != "X" && userQuestion != "0") {
-        response = '0';
-        string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + userQuestion;
-        string GPTresponse = callChatGPTAPI(prompt);
-        nlohmann::json jsonResponse = nlohmann::json::parse(GPTresponse);
-        std::string textResponse = jsonResponse["choices"][0]["message"]["content"];
-        cout << "Response from ChatGPT: " << textResponse << endl;
-    }else{
-        return userQuestion;
-    }
+    string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + userQuestion;
+    string GPTresponse = callChatGPTAPI(prompt);
+    nlohmann::json jsonResponse = nlohmann::json::parse(GPTresponse);
+    std::string textResponse = jsonResponse["choices"][0]["message"]["content"];
+    cout << "Response from ChatGPT: " << textResponse << endl;
 
+
+    cout <<  endl << "0) Return to Homepage" << endl << "X) End Program" << endl;
+    cout << "Type Answer Here: ";
+    cin >> response;
+    cout << header << '\n';
     return response;
 }
