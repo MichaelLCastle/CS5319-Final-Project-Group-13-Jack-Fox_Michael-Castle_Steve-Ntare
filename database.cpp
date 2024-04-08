@@ -92,7 +92,7 @@ void database::load_news_table() {
     }
     string line;
     vector<string> news_data;
-    while(getline(file, line)){
+    while(getline(file, line, ',')){
         news_data.push_back(line);
     }
     news_table= news_data;
