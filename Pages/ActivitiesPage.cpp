@@ -7,7 +7,8 @@
 
 string ActivitiesPage(database db){
 
-    vector<string> activity= db.get_newest_activity();
+    vector<vector<string>> activities= db.get_activities();
+
 
     string response;
     const int LINELENGTH = 100;
@@ -19,12 +20,15 @@ string ActivitiesPage(database db){
     cout << endl;
     //print( LEFT  , "Connect activities Database here and display them in a list"  , LINELENGTH );
 
-    cout << "Activity: " << activity[0] << endl;
-    cout << "Date: " << activity[1] << endl;
-    cout << "Time: " << activity[2] << endl;
-    cout << "Description: " << activity[3] << endl;
+    for(int i=0; i<activities.size(); i++){
+        vector<string> activity= activities[i];
+        cout << "Activity: " << activity[0] << endl;
+        cout << "Date: " << activity[1] << endl;
+        cout << "Time: " << activity[2] << endl;
+        cout << "Description: " << activity[3] << endl << endl;
+    }
 
-    cout << endl;
+
     cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
     cout << "Type Answer Here:" ;
     cin >> response;

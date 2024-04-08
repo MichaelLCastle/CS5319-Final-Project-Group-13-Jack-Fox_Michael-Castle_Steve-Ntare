@@ -200,6 +200,9 @@ bool database::login_attempt(const string username, const string password) {
 vector<string> database::get_newest_activity(){
     return activities_table.back();
 }
+vector<vector<string>> database::get_activities() {
+    return activities_table;
+}
 void database::add_activity(string name, string date, string time, string description){
     vector<string> new_activity= {name, date, time, description};
     activities_table.push_back(new_activity);

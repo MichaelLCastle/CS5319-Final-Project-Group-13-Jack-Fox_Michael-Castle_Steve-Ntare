@@ -50,6 +50,7 @@ public:
 
     // Activities Functions
     vector<string> get_newest_activity();
+    vector<vector<string>> get_activities();
     void add_activity(string, string, string, string);
 
     // Feedback Functions

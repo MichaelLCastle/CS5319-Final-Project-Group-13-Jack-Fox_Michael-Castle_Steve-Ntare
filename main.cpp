@@ -38,7 +38,7 @@ int main(){
     }
 
 
-    while (FirstResponse != "X") {
+    while (FirstResponse != "X" && FirstResponse != "x") {
         if (FirstResponse == "1") {
             FirstResponse = BasicParkInformationPage(db);
         } else if (FirstResponse == "2") {

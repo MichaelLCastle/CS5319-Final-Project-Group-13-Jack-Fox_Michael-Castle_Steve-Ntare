@@ -21,39 +21,44 @@ void AdminPage(database& db){
     cout << "1) Update Daily News" << endl << "2) View Guest Feedback " << endl << "3) Add Activities "  << endl << "X) End Program" << endl;
     cout << "Type Answer Here:" ;
     cin >> FirstResponse;
-    int response= stoi(FirstResponse);
-    vector<vector<string>> feedback= db.get_feedback();
-    string name;
-    string date;
-    string time;
-    string description;
-    string news;
-    switch(response){
-        case 1:
-            cout << "Input new news here: ";
-            cin >> news;
-            db.add_news(news);
-            break;
-        case 2:
-            cout << endl;
-            for(int i=0; i<feedback.size(); i++){
-                cout << "Rating: " << feedback[i][0] << endl;
+    if(FirstResponse=="X" || FirstResponse=="x"){
+        return;
+    }else {
 
-                cout << "Comment: " << feedback[i][1] << endl << endl;
-            }
-            break;
-        case 3:
-            cout << "Activity name: ";
-            cin >> name;
-            cout << "Activity date: ";
-            cin >> date;
-            cout << "Activity time: ";
-            cin >> time;
-            cout << "Activity description: ";
-            cin >> description;
+        int response = stoi(FirstResponse);
+        vector<vector<string>> feedback = db.get_feedback();
+        string name;
+        string date;
+        string time;
+        string description;
+        string news;
+        switch (response) {
+            case 1:
+                cout << "Input new news here: ";
+                cin >> news;
+                db.add_news(news);
+                break;
+            case 2:
+                cout << endl;
+                for (int i = 0; i < feedback.size(); i++) {
+                    cout << "Rating: " << feedback[i][0] << endl;
 
-            db.add_activity(name, date, time, description);
-            break;
+                    cout << "Comment: " << feedback[i][1] << endl << endl;
+                }
+                break;
+            case 3:
+                cout << "Activity name: ";
+                cin >> name;
+                cout << "Activity date: ";
+                cin >> date;
+                cout << "Activity time: ";
+                cin >> time;
+                cout << "Activity description: ";
+                cin >> description;
+
+                db.add_activity(name, date, time, description);
+                break;
+        }
     }
     cout << header << '\n';
 
