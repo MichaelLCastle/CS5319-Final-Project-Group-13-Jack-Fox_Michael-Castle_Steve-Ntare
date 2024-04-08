@@ -26,9 +26,6 @@ string FeedbackPage(database& db){
 
     db.add_feedback(rating, comment);
 
-    cout << "0) Return to Homepage" << endl << "X) To End Program:";
-    cin >> response;
-
     // add code to connect Feedback database here
 
     if(response != "X" && response != "0"){

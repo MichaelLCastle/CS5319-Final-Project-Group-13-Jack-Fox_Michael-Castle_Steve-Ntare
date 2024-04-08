@@ -47,8 +47,9 @@ string callChatGPTAPI(const std::string& prompt) {
 
 string AIHelperPage(){
 
-
+    string userQuestion;
     string response;
+
     const int LINELENGTH = 100;
     string header(LINELENGTH, '=');
     cout << header << '\n';
@@ -61,17 +62,18 @@ string AIHelperPage(){
     // Use getline to read the full line of input
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    getline(cin, response);  // This replaces cin >> response;
+    getline(cin, userQuestion);  // This replaces cin >> response;
 
-    if(response != "X" && response != "0") {
-        string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + response;
+    if(userQuestion != "X" && userQuestion != "0") {
+        response = '0';
+        string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + userQuestion;
         string GPTresponse = callChatGPTAPI(prompt);
         nlohmann::json jsonResponse = nlohmann::json::parse(GPTresponse);
         std::string textResponse = jsonResponse["choices"][0]["message"]["content"];
         cout << "Response from ChatGPT: " << textResponse << endl;
-        //cout << prompt;
+    }else{
+        return userQuestion;
     }
 
-    cout << header << '\n';
     return response;
 }
