@@ -7,8 +7,9 @@
 #include <iostream>
 #include <iomanip>
 #include "print.h"
+#include "User_Pipe.h"
 
-string WeatherPage();
+string WeatherPage(database);
 
 
 #endif //SEMESTERPROJECT_WEATHERPAGE_H

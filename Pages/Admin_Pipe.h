@@ -11,7 +11,7 @@
 #include "../database.h"
 using namespace std;
 
-void AdminPage(database&);
+void Admin_Pipe(database&);
 int Authentication(database);
 
 #endif //SEMESTERPROJECT_ADMINPAGE_H

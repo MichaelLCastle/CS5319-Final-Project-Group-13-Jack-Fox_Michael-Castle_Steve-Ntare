@@ -40,7 +40,7 @@ std::string fetchWeatherData() {
 }
 
 // WeatherPage function to display weather using OpenWeather API
-string WeatherPage() {
+string WeatherPage(database db) {
     const int LINELENGTH = 100;
     string header(LINELENGTH, '=');
     cout << header << '\n';
@@ -62,10 +62,12 @@ string WeatherPage() {
         cout << "Condition: " << description << endl;
     }
 
-    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
-    string response;
-    cout << "Type Answer Here: ";
-    cin >> response;
-    cout << header << '\n';
-    return response;
+    User_Pipe(db);
+
+//    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
+//    string response;
+//    cout << "Type Answer Here: ";
+//    cin >> response;
+//    cout << header << '\n';
+//    return response;
 }

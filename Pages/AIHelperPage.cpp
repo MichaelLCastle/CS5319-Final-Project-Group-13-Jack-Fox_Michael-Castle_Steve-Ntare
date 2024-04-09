@@ -7,7 +7,7 @@
 
 
 // Function to handle the response
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp) {
+static size_t WriteCallbackAI(void *contents, size_t size, size_t nmemb, void *userp) {
     ((std::string*)userp)->append((char*)contents, size * nmemb);
     return size * nmemb;
 }
@@ -28,7 +28,7 @@ string callChatGPTAPI(const std::string& prompt) {
         curl_easy_setopt(curl, CURLOPT_URL, "https://api.openai.com/v1/chat/completions");
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postFields.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallbackAI);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
 
         res = curl_easy_perform(curl);
@@ -45,7 +45,7 @@ string callChatGPTAPI(const std::string& prompt) {
 }
 
 
-string AIHelperPage(){
+string AIHelperPage(database db){
 
     string userQuestion;
     string response;
@@ -57,23 +57,22 @@ string AIHelperPage(){
     cout << endl;
     print(CENTER, "Ask a Question Below", LINELENGTH);
     cout << endl;
-    cout << "0) Return to Homepage" << endl << "X) To End Program" << endl << "Or Enter your Question Here!: ";
+    //cout << "0) Return to Homepage" << endl << "X) To End Program" << endl << "Or Enter your Question Here!: ";
+    cout << "Enter your Question Here!: ";
 
     // Use getline to read the full line of input
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     getline(cin, userQuestion);  // This replaces cin >> response;
 
-    if(userQuestion != "X" && userQuestion != "0") {
-        response = '0';
-        string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + userQuestion;
-        string GPTresponse = callChatGPTAPI(prompt);
-        nlohmann::json jsonResponse = nlohmann::json::parse(GPTresponse);
-        std::string textResponse = jsonResponse["choices"][0]["message"]["content"];
-        cout << "Response from ChatGPT: " << textResponse << endl;
-    }else{
-        return userQuestion;
-    }
 
-    return response;
+    string prompt = "Answer the following question in relation to Red Rock National Conservatory in Las Vegas Nevada: " + userQuestion;
+    string GPTresponse = callChatGPTAPI(prompt);
+    nlohmann::json jsonResponse = nlohmann::json::parse(GPTresponse);
+    std::string textResponse = jsonResponse["choices"][0]["message"]["content"];
+    cout << "Response from ChatGPT: " << textResponse << endl;
+
+
+    User_Pipe(db);
+
 }

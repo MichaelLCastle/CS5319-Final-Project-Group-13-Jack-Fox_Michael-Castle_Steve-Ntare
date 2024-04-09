@@ -31,7 +31,7 @@ std::vector<std::string> generateOSMUrls(double baseLat, double baseLon, int zoo
     return urls;
 }
 
-std::string MapsGuidesPage() {
+std::string MapsGuidesPage(database db) {
     std::cout << "Enter the number of maps you would like (1-50): ";
     int numOfMaps;
     std::cin >> numOfMaps;
@@ -53,5 +53,7 @@ std::string MapsGuidesPage() {
         std::cout << url << std::endl;
     }
 
-    return "0"; // Return to home screen
+    User_Pipe(db);
+
+    //return "0"; // Return to home screen
 }

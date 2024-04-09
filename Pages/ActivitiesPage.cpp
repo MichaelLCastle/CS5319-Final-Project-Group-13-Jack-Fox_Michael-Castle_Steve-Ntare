@@ -24,10 +24,13 @@ string ActivitiesPage(database db){
     cout << "Time: " << activity[2] << endl;
     cout << "Description: " << activity[3] << endl;
 
-    cout << endl;
-    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
-    cout << "Type Answer Here:" ;
-    cin >> response;
-    cout << header << '\n';
-    return response;
+
+    User_Pipe(db);
+
+//    cout << endl;
+//    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
+//    cout << "Type Answer Here:" ;
+//    cin >> response;
+//    cout << header << '\n';
+//    return response;
 }

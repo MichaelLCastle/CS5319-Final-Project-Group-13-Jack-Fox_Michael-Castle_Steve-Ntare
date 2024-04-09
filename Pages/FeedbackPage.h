@@ -9,6 +9,7 @@
 #include <iomanip>
 #include "print.h"
 #include "../database.h"
+#include "User_Pipe.h"
 using namespace std;
 
 string FeedbackPage(database&);

@@ -10,15 +10,17 @@
 #include <curl/curl.h>
 #include <string>
 #include <nlohmann/json.hpp>
+#include "User_Pipe.h"
 
 
 using namespace std;
 
-string AIHelperPage();
 
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
+static size_t WriteCallbackAI(void *contents, size_t size, size_t nmemb, void *userp);
 
 string callChatGPTAPI(const std::string& prompt);
+
+string AIHelperPage(database);
 
 
 

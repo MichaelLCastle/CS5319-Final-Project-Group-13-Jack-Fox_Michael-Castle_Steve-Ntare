@@ -8,10 +8,11 @@
 #include <iomanip>
 #include "print.h"
 #include <vector>
+#include "User_Pipe.h"
 
 
 std::vector<std::string> generateOSMUrls(double baseLat, double baseLon, int zoom, double latIncrement, double lonIncrement, int steps);
 std::string constructOSMUrl(double lat, double lon, int zoom);
-std::string MapsGuidesPage();
+std::string MapsGuidesPage(database);
 
 #endif //SEMESTERPROJECT_MAPSGUIDESPAGE_H

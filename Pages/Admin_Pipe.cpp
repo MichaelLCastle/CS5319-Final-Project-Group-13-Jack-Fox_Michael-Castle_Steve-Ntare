@@ -2,10 +2,10 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#include "AdminPage.h"
+#include "Admin_Pipe.h"
 
 
-void AdminPage(database& db){
+void Admin_Pipe(database& db){
 
     const int LINELENGTH = 100;
     string header( LINELENGTH, '=' );
@@ -13,10 +13,10 @@ void AdminPage(database& db){
 
     string FirstResponse;
     cout << header << '\n';
-    print( CENTER  , "Red Rock Admin Page"  , LINELENGTH );
-    cout << endl;
-    print( CENTER  , "Admin changes can occur below:"  , LINELENGTH );
-    cout << endl;
+//    print( CENTER  , "Red Rock Admin Page"  , LINELENGTH );
+//    cout << endl;
+//    print( CENTER  , "Admin changes can occur below:"  , LINELENGTH );
+//    cout << endl;
     print( LEFT  , "What would you like to do? Please type one of the following numbers"  , LINELENGTH );
     cout << "1) Update Daily News" << endl << "2) View Guest Feedback " << endl << "3) Add Activities "  << endl << "X) End Program" << endl;
     cout << "Type Answer Here:" ;

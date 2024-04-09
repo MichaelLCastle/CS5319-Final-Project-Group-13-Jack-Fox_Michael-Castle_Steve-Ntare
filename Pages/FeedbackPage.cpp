@@ -26,13 +26,14 @@ string FeedbackPage(database& db){
 
     db.add_feedback(rating, comment);
 
-    // add code to connect Feedback database here
 
-    if(response != "X" && response != "0"){
-        // add code to connect Feedback database here
-        cout << "Thank you for your feedback" << endl;
-        response = "0";
-    }
-    cout << header << '\n';
-    return response;
+    User_Pipe(db);
+
+//    if(response != "X" && response != "0"){
+//        // add code to connect Feedback database here
+//        cout << "Thank you for your feedback" << endl;
+//        response = "0";
+//    }
+//    cout << header << '\n';
+//    return response;
 }

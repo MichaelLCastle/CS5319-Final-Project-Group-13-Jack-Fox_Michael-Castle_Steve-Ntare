@@ -5,8 +5,11 @@
 #include "BasicParkInformationPage.h"
 
 string BasicParkInformationPage(database& db){
+    //added news here
+    vector<string> news= db.get_news();
     vector<string> info= db.get_info();
     string response;
+
     const int LINELENGTH = 100;
     string header(LINELENGTH, '=');
     cout << header << '\n';
@@ -24,9 +27,21 @@ string BasicParkInformationPage(database& db){
     cout << endl;
     print( LEFT  , "Address: "+info[2]  , LINELENGTH );
     cout << endl;
-    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
-    cout << "Type Answer Here:" ;
-    cin >> response;
-    cout << header << '\n';
-    return response;
+
+    //addition of news
+    print( CENTER  , "TODAY'S NEWS:"  , LINELENGTH );
+
+    for(int i=0; i<news.size(); i++){
+        cout << news[i] << "... ";
+    }
+    cout << endl << endl;
+
+    User_Pipe(db);
+
+//    cout << "0) Return to Homepage" << endl << "X) End Program" << endl;
+//    cout << "Type Answer Here:" ;
+//    cin >> response;
+//    cout << header << '\n';
+//
+//    return response;
 }
