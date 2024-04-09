@@ -55,9 +55,7 @@ string User_Pipe(database db){
             FirstResponse = AIHelperPipe(db);
         } else if (FirstResponse == "6") {
             FirstResponse = FeedbackPipe(db);
-        } else if (FirstResponse == "0") {
-            //FirstResponse = User_Pipe(db);
-        } else {
+        }else {
             cout << "Not Valid Response. Please Try again" << endl;
             this_thread::sleep_for(std::chrono::seconds(10));
             //FirstResponse = User_Pipe(db);

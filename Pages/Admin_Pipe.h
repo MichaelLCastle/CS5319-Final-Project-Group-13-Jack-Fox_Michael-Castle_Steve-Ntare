@@ -9,9 +9,15 @@
 #include <iomanip>
 #include "print.h"
 #include "../database.h"
+#include "UpdateNewsFilter.h"
+#include "ReviewFeebackFilter.h"
+#include "AddActivityFilter.h"
+#include <chrono>
+#include <thread>
+
 using namespace std;
 
 void Admin_Pipe(database&);
-int Authentication(database);
+
 
 #endif //SEMESTERPROJECT_ADMINPAGE_H
