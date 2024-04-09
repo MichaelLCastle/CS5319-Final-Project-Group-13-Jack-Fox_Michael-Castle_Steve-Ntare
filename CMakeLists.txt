@@ -20,7 +20,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(json)
 
 
-add_executable(Final_NationalPark Selected/main.cpp Selected/Pages/HomeScreen.h Selected/Pages/print.h Selected/Pages/HomeScreen.cpp Selected/Pages/print.cpp Selected/Pages/BasicParkInformationPage.cpp
+add_executable(Final_NationalPark main.cpp Selected/Pages/HomeScreen.h Selected/Pages/print.h Selected/Pages/HomeScreen.cpp Selected/Pages/print.cpp Selected/Pages/BasicParkInformationPage.cpp
         Selected/Pages/BasicParkInformationPage.h Selected/Pages/WeatherPage.cpp Selected/Pages/WeatherPage.h Selected/Pages/MapsGuidesPage.cpp Selected/Pages/MapsGuidesPage.h Selected/Pages/ActivitiesPage.cpp Selected/Pages/ActivitiesPage.h
         Selected/Pages/AIHelperPage.cpp Selected/Pages/AIHelperPage.h Selected/Pages/FeedbackPage.cpp Selected/Pages/FeedbackPage.h Selected/Pages/AdminPage.cpp Selected/Pages/AdminPage.h
         Selected/database.h Selected/database.cpp activities.csv feedback.csv info.csv login.csv news.csv )

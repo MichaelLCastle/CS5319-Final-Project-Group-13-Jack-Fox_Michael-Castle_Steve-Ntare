@@ -2,22 +2,22 @@
 // Created by Michael Ramenofsky on 3/3/24.
 //
 
-#include "Pages/HomeScreen.h"
-#include "Pages/print.h"
-#include "Pages/BasicParkInformationPage.h"
-#include "Pages/WeatherPage.h"
-#include "Pages/MapsGuidesPage.h"
-#include "Pages/ActivitiesPage.h"
-#include "Pages/AIHelperPage.h"
-#include "Pages/FeedbackPage.h"
-#include "Pages/AdminPage.h"
+#include "Selected/Pages/HomeScreen.h"
+#include "Selected/Pages/print.h"
+#include "Selected/Pages/BasicParkInformationPage.h"
+#include "Selected/Pages/WeatherPage.h"
+#include "Selected/Pages/MapsGuidesPage.h"
+#include "Selected/Pages/ActivitiesPage.h"
+#include "Selected/Pages/AIHelperPage.h"
+#include "Selected/Pages/FeedbackPage.h"
+#include "Selected/Pages/AdminPage.h"
 
 //#include <iostream>
 #include <iomanip>
 //#include "ostream"
 #include <chrono>
 #include <thread>
-#include "database.h"
+#include "Selected/database.h"
 
 
 
