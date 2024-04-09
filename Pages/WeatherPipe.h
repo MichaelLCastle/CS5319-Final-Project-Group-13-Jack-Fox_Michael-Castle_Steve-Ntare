@@ -9,7 +9,7 @@
 #include "print.h"
 #include "User_Pipe.h"
 
-string WeatherPage(database);
+string WeatherPipe(database);
 
 
 #endif //SEMESTERPROJECT_WEATHERPAGE_H

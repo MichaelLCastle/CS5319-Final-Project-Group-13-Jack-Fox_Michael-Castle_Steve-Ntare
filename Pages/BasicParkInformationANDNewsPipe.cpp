@@ -2,9 +2,9 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#include "BasicParkInformationPage.h"
+#include "BasicParkInformationANDNewsPipe.h"
 
-string BasicParkInformationPage(database& db){
+string BasicParkInformationANDNewsPipe(database& db){
     //added news here
     vector<string> news= db.get_news();
     vector<string> info= db.get_info();

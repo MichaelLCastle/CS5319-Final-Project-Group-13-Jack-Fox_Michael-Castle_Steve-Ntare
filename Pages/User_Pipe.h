@@ -8,12 +8,12 @@
 #include <thread>
 
 #include "print.h"
-#include "BasicParkInformationPage.h"
-#include "WeatherPage.h"
-#include "MapsGuidesPage.h"
-#include "ActivitiesPage.h"
-#include "AIHelperPage.h"
-#include "FeedbackPage.h"
+#include "BasicParkInformationANDNewsPipe.h"
+#include "WeatherPipe.h"
+#include "MapsGuidesPipe.h"
+#include "ActivitiesPipe.h"
+#include "AIHelperPipe.h"
+#include "FeedbackPipe.h"
 
 
 using namespace std;

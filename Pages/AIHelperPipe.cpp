@@ -2,7 +2,7 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#include "AIHelperPage.h"
+#include "AIHelperPipe.h"
 
 
 
@@ -45,7 +45,7 @@ string callChatGPTAPI(const std::string& prompt) {
 }
 
 
-string AIHelperPage(database db){
+string AIHelperPipe(database db){
 
     string userQuestion;
     string response;

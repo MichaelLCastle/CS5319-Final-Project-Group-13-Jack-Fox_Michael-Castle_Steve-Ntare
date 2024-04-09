@@ -44,17 +44,17 @@ string User_Pipe(database db){
 
     while (FirstResponse != "X") {
         if (FirstResponse == "1") {
-            FirstResponse = BasicParkInformationPage(db);
+            FirstResponse = BasicParkInformationANDNewsPipe(db);
         } else if (FirstResponse == "2") {
-            FirstResponse = WeatherPage(db);
+            FirstResponse = WeatherPipe(db);
         } else if (FirstResponse == "3") {
-            FirstResponse = MapsGuidesPage(db);
+            FirstResponse = MapsGuidesPipe(db);
         } else if (FirstResponse == "4") {
-            FirstResponse = ActivitiesPage(db);
+            FirstResponse = ActivitiesPipe(db);
         } else if (FirstResponse == "5") {
-            FirstResponse = AIHelperPage(db);
+            FirstResponse = AIHelperPipe(db);
         } else if (FirstResponse == "6") {
-            FirstResponse = FeedbackPage(db);
+            FirstResponse = FeedbackPipe(db);
         } else if (FirstResponse == "0") {
             //FirstResponse = User_Pipe(db);
         } else {

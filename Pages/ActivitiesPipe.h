@@ -2,9 +2,8 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#ifndef SEMESTERPROJECT_FEEDBACKPAGE_H
-#define SEMESTERPROJECT_FEEDBACKPAGE_H
-
+#ifndef SEMESTERPROJECT_ACTIVITIESPAGE_H
+#define SEMESTERPROJECT_ACTIVITIESPAGE_H
 #include <iostream>
 #include <iomanip>
 #include "print.h"
@@ -12,7 +11,6 @@
 #include "User_Pipe.h"
 using namespace std;
 
-string FeedbackPage(database&);
+string ActivitiesPipe(database);
 
-
-#endif //SEMESTERPROJECT_FEEDBACKPAGE_H
+#endif //SEMESTERPROJECT_ACTIVITIESPAGE_H
