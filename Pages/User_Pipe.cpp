@@ -45,17 +45,17 @@ string User_Pipe(database db){
 
     while (FirstResponse != "X" && FirstResponse != "x") {
         if (FirstResponse == "1") {
-            FirstResponse = BasicParkInformationANDNewsPipe(db);
+            FirstResponse = BasicParkInformationANDNewsFilter(db);
         } else if (FirstResponse == "2") {
-            FirstResponse = WeatherPipe(db);
+            FirstResponse = WeatherFilter(db);
         } else if (FirstResponse == "3") {
-            FirstResponse = MapsGuidesPipe(db);
+            FirstResponse = MapsGuidesFilter(db);
         } else if (FirstResponse == "4") {
-            FirstResponse = ActivitiesPipe(db);
+            FirstResponse = ActivitiesFilter(db);
         } else if (FirstResponse == "5") {
-            FirstResponse = AIHelperPipe(db);
+            FirstResponse = AIHelperFilter(db);
         } else if (FirstResponse == "6") {
-            FirstResponse = FeedbackPipe(db);
+            FirstResponse = FeedbackFilter(db);
         }else {
             cout << "Not Valid Response. Please Try again" << endl;
             //this_thread::sleep_for(std::chrono::seconds(10));

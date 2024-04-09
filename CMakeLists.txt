@@ -20,9 +20,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(json)
 
 
-add_executable(Final_NationalPark main.cpp Pages/User_Pipe.h Pages/print.h Pages/User_Pipe.cpp Pages/print.cpp Pages/BasicParkInformationANDNewsPipe.cpp
-        Pages/BasicParkInformationANDNewsPipe.h Pages/WeatherPipe.cpp Pages/WeatherPipe.h Pages/MapsGuidesPipe.cpp Pages/MapsGuidesPipe.h Pages/ActivitiesPipe.cpp Pages/ActivitiesPipe.h
-        Pages/AIHelperPipe.cpp Pages/AIHelperPipe.h Pages/FeedbackPipe.cpp Pages/FeedbackPipe.h Pages/Admin_Pipe.cpp Pages/Admin_Pipe.h
+add_executable(Final_NationalPark main.cpp Pages/User_Pipe.h Pages/print.h Pages/User_Pipe.cpp Pages/print.cpp Pages/BasicParkInformationANDNewsFilter.cpp
+        Pages/BasicParkInformationANDNewsFilter.h Pages/WeatherFilter.cpp Pages/WeatherFilter.h Pages/MapsGuidesFilter.cpp Pages/MapsGuidesFilter.h Pages/ActivitiesFilter.cpp Pages/ActivitiesFilter.h
+        Pages/AIHelperFilter.cpp Pages/AIHelperFilter.h Pages/FeedbackFilter.cpp Pages/FeedbackFilter.h Pages/Admin_Pipe.cpp Pages/Admin_Pipe.h
         database.h database.cpp activities.csv feedback.csv info.csv login.csv news.csv Pages/AuthenticationFilter.cpp Pages/AuthenticationFilter.h Pages/UpdateNewsFilter.cpp Pages/UpdateNewsFilter.h Pages/ReviewFeebackFilter.cpp Pages/ReviewFeebackFilter.h Pages/AddActivityFilter.cpp Pages/AddActivityFilter.h)
 
 

@@ -13,6 +13,6 @@
 
 std::vector<std::string> generateOSMUrls(double baseLat, double baseLon, int zoom, double latIncrement, double lonIncrement, int steps);
 std::string constructOSMUrl(double lat, double lon, int zoom);
-std::string MapsGuidesPipe(database);
+std::string MapsGuidesFilter(database);
 
 #endif //SEMESTERPROJECT_MAPSGUIDESPAGE_H

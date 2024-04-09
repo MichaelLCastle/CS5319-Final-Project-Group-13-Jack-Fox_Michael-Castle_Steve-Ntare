@@ -11,6 +11,6 @@
 #include "User_Pipe.h"
 using namespace std;
 
-string ActivitiesPipe(database);
+string ActivitiesFilter(database);
 
 #endif //SEMESTERPROJECT_ACTIVITIESPAGE_H

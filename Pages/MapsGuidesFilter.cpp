@@ -1,4 +1,4 @@
-#include "MapsGuidesPipe.h"
+#include "MapsGuidesFilter.h"
 #include <cmath>
 #include <vector>
 #include <string>
@@ -31,7 +31,7 @@ std::vector<std::string> generateOSMUrls(double baseLat, double baseLon, int zoo
     return urls;
 }
 
-std::string MapsGuidesPipe(database db) {
+std::string MapsGuidesFilter(database db) {
     std::cout << "Enter the number of maps you would like (1-50): ";
     int numOfMaps;
     std::cin >> numOfMaps;

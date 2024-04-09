@@ -12,6 +12,6 @@
 
 using namespace std;
 
-string BasicParkInformationANDNewsPipe(database&);
+string BasicParkInformationANDNewsFilter(database&);
 
 #endif //SEMESTERPROJECT_BASICPARKINFORMATIONPAGE_H

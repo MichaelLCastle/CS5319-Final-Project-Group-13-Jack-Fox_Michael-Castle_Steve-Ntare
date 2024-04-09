@@ -20,7 +20,7 @@ static size_t WriteCallbackAI(void *contents, size_t size, size_t nmemb, void *u
 
 string callChatGPTAPI(const std::string& prompt);
 
-string AIHelperPipe(database);
+string AIHelperFilter(database);
 
 
 

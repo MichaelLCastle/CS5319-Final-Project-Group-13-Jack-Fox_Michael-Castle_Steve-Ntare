@@ -2,10 +2,10 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#include "FeedbackPipe.h"
+#include "FeedbackFilter.h"
 
 
-string FeedbackPipe(database& db){
+string FeedbackFilter(database& db){
     string response;
     string Feedback;
     const int LINELENGTH = 100;

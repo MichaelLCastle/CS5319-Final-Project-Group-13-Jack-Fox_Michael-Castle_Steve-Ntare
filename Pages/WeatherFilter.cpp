@@ -1,4 +1,4 @@
-#include "WeatherPipe.h"
+#include "WeatherFilter.h"
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
 #include <iostream>
@@ -40,7 +40,7 @@ std::string fetchWeatherData() {
 }
 
 // WeatherPage function to display weather using OpenWeather API
-string WeatherPipe(database db) {
+string WeatherFilter(database db) {
     const int LINELENGTH = 100;
     string header(LINELENGTH, '=');
     cout << header << '\n';

@@ -12,7 +12,7 @@
 #include "User_Pipe.h"
 using namespace std;
 
-string FeedbackPipe(database&);
+string FeedbackFilter(database&);
 
 
 #endif //SEMESTERPROJECT_FEEDBACKPAGE_H

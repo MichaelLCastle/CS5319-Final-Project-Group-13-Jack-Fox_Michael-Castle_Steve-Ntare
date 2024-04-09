@@ -2,10 +2,10 @@
 // Created by Michael Ramenofsky on 3/30/24.
 //
 
-#include "ActivitiesPipe.h"
+#include "ActivitiesFilter.h"
 
 
-string ActivitiesPipe(database db){
+string ActivitiesFilter(database db){
 
     vector<string> activity= db.get_newest_activity();
 
