@@ -6,6 +6,7 @@
 
 
 string User_Pipe(database db){
+    db.save_tables();
     vector<string> news= db.get_news();
     int LENGTH = 0;
 //    if(NEWS.length() > 100){
@@ -42,7 +43,7 @@ string User_Pipe(database db){
 
     db.save_tables();
 
-    while (FirstResponse != "X") {
+    while (FirstResponse != "X" && FirstResponse != "x") {
         if (FirstResponse == "1") {
             FirstResponse = BasicParkInformationANDNewsPipe(db);
         } else if (FirstResponse == "2") {
@@ -57,10 +58,10 @@ string User_Pipe(database db){
             FirstResponse = FeedbackPipe(db);
         }else {
             cout << "Not Valid Response. Please Try again" << endl;
-            this_thread::sleep_for(std::chrono::seconds(10));
-            //FirstResponse = User_Pipe(db);
+            //this_thread::sleep_for(std::chrono::seconds(10));
+            FirstResponse = User_Pipe(db);
         }
     }
-
+    std::exit(0);
 
 }

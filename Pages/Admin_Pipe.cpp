@@ -6,6 +6,7 @@
 
 
 void Admin_Pipe(database& db){
+    db.save_tables();
 
     const int LINELENGTH = 100;
     string header( LINELENGTH, '=' );
