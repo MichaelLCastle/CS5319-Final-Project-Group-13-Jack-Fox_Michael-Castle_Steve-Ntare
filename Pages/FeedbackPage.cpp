@@ -21,7 +21,8 @@ string FeedbackPage(database& db){
     cin >> rating;
     string comment;
     cout << "Please leave a brief comment about your experience:";
-    cin >> comment;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    getline(cin,comment);
     cout << endl;
 
     db.add_feedback(rating, comment);

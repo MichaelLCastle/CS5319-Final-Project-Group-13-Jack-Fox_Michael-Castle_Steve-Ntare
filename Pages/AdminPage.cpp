@@ -21,9 +21,7 @@ void AdminPage(database& db){
     cout << "1) Update Daily News" << endl << "2) View Guest Feedback " << endl << "3) Add Activities "  << endl << "X) End Program" << endl;
     cout << "Type Answer Here:" ;
     cin >> FirstResponse;
-    if(FirstResponse=="X" || FirstResponse=="x"){
-        return;
-    }else {
+    while(FirstResponse!= "X" && FirstResponse!= "x"){
 
         int response = stoi(FirstResponse);
         vector<vector<string>> feedback = db.get_feedback();
@@ -35,7 +33,8 @@ void AdminPage(database& db){
         switch (response) {
             case 1:
                 cout << "Input new news here: ";
-                cin >> news;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin,news);
                 db.add_news(news);
                 break;
             case 2:
@@ -48,17 +47,26 @@ void AdminPage(database& db){
                 break;
             case 3:
                 cout << "Activity name: ";
-                cin >> name;
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin,name);
                 cout << "Activity date: ";
-                cin >> date;
+                //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin,date);
                 cout << "Activity time: ";
-                cin >> time;
+                //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin,time);
                 cout << "Activity description: ";
-                cin >> description;
+                //cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                getline(cin,description);
 
                 db.add_activity(name, date, time, description);
                 break;
         }
+        cout << header << '\n';
+        print( LEFT  , "What would you like to do? Please type one of the following numbers"  , LINELENGTH );
+        cout << "1) Update Daily News" << endl << "2) View Guest Feedback " << endl << "3) Add Activities "  << endl << "X) End Program" << endl;
+        cout << "Type Answer Here:" ;
+        cin >> FirstResponse;
     }
     cout << header << '\n';
 
