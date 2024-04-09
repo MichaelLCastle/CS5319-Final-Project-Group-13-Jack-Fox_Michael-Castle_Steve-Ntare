@@ -20,10 +20,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(json)
 
 
-add_executable(Final_NationalPark main.cpp Pages/HomeScreen.h Pages/print.h Pages/HomeScreen.cpp Pages/print.cpp Pages/BasicParkInformationPage.cpp
-        Pages/BasicParkInformationPage.h Pages/WeatherPage.cpp Pages/WeatherPage.h Pages/MapsGuidesPage.cpp Pages/MapsGuidesPage.h Pages/ActivitiesPage.cpp Pages/ActivitiesPage.h
-        Pages/AIHelperPage.cpp Pages/AIHelperPage.h Pages/FeedbackPage.cpp Pages/FeedbackPage.h Pages/AdminPage.cpp Pages/AdminPage.h
-        database.h database.cpp activities.csv feedback.csv info.csv login.csv news.csv )
+add_executable(Final_NationalPark Selected/main.cpp Selected/Pages/HomeScreen.h Selected/Pages/print.h Selected/Pages/HomeScreen.cpp Selected/Pages/print.cpp Selected/Pages/BasicParkInformationPage.cpp
+        Selected/Pages/BasicParkInformationPage.h Selected/Pages/WeatherPage.cpp Selected/Pages/WeatherPage.h Selected/Pages/MapsGuidesPage.cpp Selected/Pages/MapsGuidesPage.h Selected/Pages/ActivitiesPage.cpp Selected/Pages/ActivitiesPage.h
+        Selected/Pages/AIHelperPage.cpp Selected/Pages/AIHelperPage.h Selected/Pages/FeedbackPage.cpp Selected/Pages/FeedbackPage.h Selected/Pages/AdminPage.cpp Selected/Pages/AdminPage.h
+        Selected/database.h Selected/database.cpp activities.csv feedback.csv info.csv login.csv news.csv )
 
 
 include(FetchContent)
